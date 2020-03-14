@@ -14,43 +14,19 @@ class Home extends StatelessWidget {
       centerTitle: true,
       backgroundColor: Colors.red,
     ),
-    body: Center(
-      // child: IconButton(
-      //   icon: Icon(Icons.phone), 
-      //   onPressed: (){},
-      //   color: Colors.orange
-      //   ),
-
-      // child: FlatButton(
-      //   onPressed: () {
-      //     print('yeeey u clicked');
-      //   }, 
-      //   child: Text('yooo'),
-      //   color: Colors.indigoAccent,
-      // ),
-
-      // child: FlatButton.icon(
-      //   onPressed: () {}, 
-      //   icon: Icon(
-      //     Icons.mail
-      //   ),
-      //   label: Text('mail me'),
-      //   color: Colors.green,
-      // ),
-
-      // child: Icon(
-      //   Icons.airline_seat_flat,
-      //   color: Colors.red,
-      //   size: 50.0
-      // ),
-
-      // child: RaisedButton(
-      //   onPressed: (){},
-      //   child: Text('yellooow'),
-      //   color: Colors.yellow,
-      // ),
-      
+    body: 
+    Padding(
+      padding: EdgeInsets.fromLTRB(50.0, 30.0, 60.0, 40.0),
+      child: Text('meowwww'),
     ),
+
+    // Container(
+    //   color: Colors.pink,
+    //   child: Text('yep its a container'),
+    //   padding: EdgeInsets.all(20.0),
+    //   margin: EdgeInsets.symmetric(horizontal:50.0, vertical:30.0),
+    // ),
+    
     floatingActionButton: FloatingActionButton(
       onPressed: (){},
       child: Text('Yepppp'),
