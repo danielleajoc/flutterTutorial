@@ -15,7 +15,40 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.red,
     ),
     body: Center(
-      child: Image.asset('assets/pic2.png'),  
+      // child: IconButton(
+      //   icon: Icon(Icons.phone), 
+      //   onPressed: (){},
+      //   color: Colors.orange
+      //   ),
+
+      // child: FlatButton(
+      //   onPressed: () {
+      //     print('yeeey u clicked');
+      //   }, 
+      //   child: Text('yooo'),
+      //   color: Colors.indigoAccent,
+      // ),
+
+      // child: FlatButton.icon(
+      //   onPressed: () {}, 
+      //   icon: Icon(
+      //     Icons.mail
+      //   ),
+      //   label: Text('mail me'),
+      //   color: Colors.green,
+      // ),
+
+      // child: Icon(
+      //   Icons.airline_seat_flat,
+      //   color: Colors.red,
+      //   size: 50.0
+      // ),
+
+      // child: RaisedButton(
+      //   onPressed: (){},
+      //   child: Text('yellooow'),
+      //   color: Colors.yellow,
+      // ),
       
     ),
     floatingActionButton: FloatingActionButton(
