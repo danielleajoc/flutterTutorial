@@ -1,92 +1,35 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: NinjaCard(),
+  home: QuoteList(),
 ));
 
-class NinjaCard extends StatefulWidget {
+class QuoteList extends StatefulWidget {
   @override
-  _NinjaCardState createState() => _NinjaCardState();
+  _QuoteListState createState() => _QuoteListState();
 }
 
-class _NinjaCardState extends State<NinjaCard> {
-  int ninjaLevel=0;
+class _QuoteListState extends State<QuoteList> {
+  List<String> quotes =[
+    "you go gurl",
+    "lets do disss",
+    "Try Try AGEEEN"
+  ];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Center(child:Text('Ninja ID Card')),
-        backgroundColor: Colors.grey[850],
+        backgroundColor: Colors.redAccent,
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          setState(() {
-            ninjaLevel+=1;  
-          });
-        },
-        backgroundColor: Colors.grey[800],
-        child: Icon(Icons.add),
+      backgroundColor: Colors.grey[200],
+      body: Column(
+        children: quotes.map((quote){
+          return Text(quote);
+        }).toList()
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/pic2.png'),
-                radius:40.0
-              ),
-            ),
-            Divider(height: 60.0, color: Colors.grey[800]),
-            Text(
-              'Name:',
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2.0
-              )),
-            SizedBox(height:10.0),
-            Text(
-              'Spacey',
-              style: TextStyle(
-                color: Colors.amberAccent[200],
-                fontSize: 28.0,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.bold
-              )),
-            SizedBox(height:30.0),
-            Text(
-              'Current Ninja Level',
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2.0
-              )),
-            SizedBox(height:10.0),
-            Text(
-              '$ninjaLevel',
-              style: TextStyle(
-                color: Colors.amberAccent[200],
-                fontSize: 28.0,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.bold
-              )),
-            SizedBox(height:30.0),
-            Row(
-              children: <Widget> [
-                Icon(Icons.mail, color:Colors.grey[400]),
-                SizedBox(width:10.0),
-                Text(
-                  'daneAjoc@Gmail.com',
-                  style: TextStyle(
-                    color: Colors.grey,
-                  )
-                ),
-              ]
-            )
-          ],
-        ), 
-      )
     );
   }
 }
